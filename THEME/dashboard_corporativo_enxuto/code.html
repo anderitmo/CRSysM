@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>CRSys M3000 - CRM para Agências Web</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-container": "#fcffe2",
+          "surface-container-low": "#f8fafc",
+          "on-secondary-fixed-variant": "#554500",
+          "on-tertiary-container": "#f8ffee",
+          "surface": "#f8fafc",
+          "tertiary": "#4e6242",
+          "brass-accent": "#8c7304",
+          "surface-tint": "#546500",
+          "on-secondary-fixed": "#231b00",
+          "on-tertiary-fixed": "#0f2007",
+          "soft-ochre": "#8c7541",
+          "outline-variant": "#e2e8f0",
+          "neutral-olive": "#8c8738",
+          "panel-bg": "#f8fafc",
+          "secondary-fixed": "#fef3c7",
+          "secondary-fixed-dim": "#fde68a",
+          "outline": "#94a3b8",
+          "on-primary-fixed": "#171e00",
+          "refined-sage": "#778c69",
+          "text-primary": "#0f172a",
+          "on-error": "#ffffff",
+          "surface-container-highest": "#e2e8f0",
+          "on-surface": "#0f172a",
+          "primary-fixed-dim": "#b8d15a",
+          "surface-container-lowest": "#ffffff",
+          "error": "#ba1a1a",
+          "on-primary": "#ffffff",
+          "inverse-primary": "#b8d15a",
+          "on-surface-variant": "#64748b",
+          "tertiary-container": "#667b59",
+          "text-secondary": "#475569",
+          "on-tertiary-fixed-variant": "#394c2e",
+          "primary": "#516300",
+          "on-error-container": "#93000a",
+          "secondary-container": "#fef3c7",
+          "on-secondary-container": "#78350f",
+          "card-bg": "#ffffff",
+          "primary-container": "#516300",
+          "error-container": "#fee2e2",
+          "canvas-bg": "#f8fafc",
+          "primary-fixed": "#ecfccb",
+          "inverse-on-surface": "#f8fafc",
+          "on-background": "#0f172a",
+          "border-subtle": "#e2e8f0",
+          "on-secondary": "#ffffff",
+          "border-strong": "#cbd5e1",
+          "surface-container": "#f1f5f9",
+          "surface-container-high": "#e2e8f0",
+          "tertiary-fixed-dim": "#b7cda6",
+          "text-muted": "#94a3b8",
+          "background": "#f8fafc",
+          "surface-variant": "#f1f5f9",
+          "secondary": "#8c7304",
+          "inverse-surface": "#1e293b",
+          "on-primary-fixed-variant": "#3e4c00",
+          "tertiary-fixed": "#dcfce7",
+          "olive-primary": "#768c1a",
+          "on-tertiary": "#ffffff",
+          "surface-bright": "#ffffff",
+          "surface-dim": "#f1f5f9"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "2xl": "1rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "layout-sidebar": "16rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2rem",
+          "gutter-grid": "1rem",
+          "sidebar-width": "16rem",
+          "space-md": "0.75rem",
+          "margin-shell": "1.5rem",
+          "space-2xs": "0.125rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-2xl": "3rem",
+          "space-base": "1rem",
+          "utility-panel-width": "24rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Open Sans"],
+          "label-md": ["Open Sans"],
+          "headline-xl": ["Outfit"],
+          "headline-sm": ["Outfit"],
+          "label-xs": ["Open Sans"],
+          "headline-lg": ["Outfit"],
+          "data-tabular": ["Open Sans"],
+          "body-sm": ["Open Sans"],
+          "body-md": ["Open Sans"],
+          "headline-md": ["Outfit"]
+        },
+        "fontSize": {
+          "body-lg": ["15px", {"lineHeight": "22px", "fontWeight": "400"}],
+          "label-md": ["11px", {"lineHeight": "14px", "fontWeight": "600"}],
+          "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+          "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+          "label-xs": ["10px", {"lineHeight": "12px", "fontWeight": "600"}],
+          "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+          "data-tabular": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+          "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+          "body-md": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+          "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+        }
+      }
+    }
+  };
+</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-layout-sidebar bg-surface-container-lowest border-r border-border-subtle flex flex-col justify-between z-50 shadow-sm"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WhzidGCcKEBf5ubdgtWbJIpg6ITz6NfWqVPENSRVfcXqYAmVuif4wHNfo9kjFmnY6zJ3tOXAQ709HmwcScR9yIhWy-quS5EZ0o5HR9HjhkzhY9pLA-YA1aTG3Ybu0PpNfLg8Rw4H-5lOQi4M0Beg0PIOr1monBvCf_2fhieoFYXrtQAVR7DGiDS4LEnbFDPubyWet9AyJ0L-dtgO-EvSaxn-b_dzUo5IfSgNn7qIUd1EqCTGHX-G-wxzDnrXDjzJvf1VfUJzKc"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">CRSys M3000</span></div><span class="font-label-xs text-label-xs uppercase tracking-wider text-text-muted pl-space-2xs">CRM PARA AGÊNCIAS WEB</span></div><nav class="flex flex-col gap-space-2xs px-space-md mt-space-sm" data-active-classes="bg-primary text-on-primary font-semibold rounded-lg shadow-sm"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-colors bg-primary text-on-primary font-semibold rounded-lg shadow-sm" data-path="dashboard" href="#/dashboard"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" data-path="leads" href="#/leads"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">filter_alt</span><span class="font-body-md text-body-md">Leads</span></div><span class="bg-amber-100 text-amber-900 font-label-xs text-label-xs px-space-xs py-space-2xs rounded-full font-bold">14</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" data-path="clientes" href="#/clientes"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">domain</span><span class="font-body-md text-body-md">Clientes</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" data-path="orcamentos" href="#/orcamentos"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">request_quote</span><span class="font-body-md text-body-md">Orçamentos</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" data-path="projetos" href="#/projetos"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_kanban</span><span class="font-body-md text-body-md">Projetos</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agenda" href="#/agenda"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">calendar_month</span><span class="font-body-md text-body-md">Agenda</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" data-path="indicacoes" href="#/indicacoes"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">handshake</span><span class="font-body-md text-body-md">Indicações</span></div></a></nav></div><div class="p-space-md bg-surface-container-low border border-border-subtle flex flex-col gap-space-sm m-space-md rounded-xl"><div class="flex items-center justify-between px-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-olive-primary animate-pulse"></span><span class="font-label-xs text-label-xs text-text-secondary font-semibold">Supabase Online</span></div><span class="material-symbols-outlined text-primary text-[14px]">cloud_done</span></div><div class="flex items-center justify-between pt-space-xs border-t border-border-subtle"><div class="flex items-center gap-space-sm min-w-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col truncate"><span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Lucas Martins</span><span class="font-label-xs text-label-xs text-text-muted truncate">Diretor Comercial</span></div></div><a class="p-space-xs rounded-lg text-text-secondary hover:bg-surface-container hover:text-error transition-colors shrink-0" data-path="login" href="#/logout" title="Encerrar sessão"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-layout-sidebar"><header class="fixed top-0 left-layout-sidebar right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md border-b border-border-subtle shadow-sm z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-base"><img alt="logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WhzidGCcKEBf5ubdgtWbJIpg6ITz6NfWqVPENSRVfcXqYAmVuif4wHNfo9kjFmnY6zJ3tOXAQ709HmwcScR9yIhWy-quS5EZ0o5HR9HjhkzhY9pLA-YA1aTG3Ybu0PpNfLg8Rw4H-5lOQi4M0Beg0PIOr1monBvCf_2fhieoFYXrtQAVR7DGiDS4LEnbFDPubyWet9AyJ0L-dtgO-EvSaxn-b_dzUo5IfSgNn7qIUd1EqCTGHX-G-wxzDnrXDjzJvf1VfUJzKc"/><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">CRSys M3000</span><div class="relative flex items-center ml-space-md"><span class="material-symbols-outlined absolute left-space-md text-text-muted text-[18px]">search</span><input class="w-80 h-9 pl-9 pr-space-md bg-surface-container-low border border-border-subtle rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-text-muted focus:outline-none focus:border-olive-primary focus:bg-surface-container-lowest transition-all" placeholder="Buscar leads, clientes, orçamentos... (Ctrl+K)" type="text"/></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs bg-primary hover:bg-olive-primary text-on-primary px-space-md h-9 rounded-lg font-body-sm text-body-sm font-semibold transition-all shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span class="">+ Novo Registro</span></button><div class="relative flex items-center justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-lg text-text-secondary hover:bg-surface-container hover:text-on-surface transition-colors border border-border-subtle" title="Notificações" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 bg-error text-on-error font-label-xs text-[9px] font-bold rounded-full flex items-center justify-center shadow-sm">3</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-xl py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- GREETING & PAGE CONTEXT HEADER -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md py-space-xs">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-flex items-center gap-1 bg-lime-50 border border-lime-200 text-olive-primary px-2.5 py-0.5 rounded-full text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-olive-primary animate-pulse"></span>
+        Operações em Tempo Real
+      </span>
+</div>
+<h1 class="font-headline-lg text-[26px] text-on-surface font-bold tracking-tight">Olá, Lucas! Veja o pulso da sua agência hoje</h1>
+<p class="font-body-md text-text-secondary text-[14px] mt-space-2xs">Resumo das principais metas, entregas e relacionamentos ativos nesta semana.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest border border-border-subtle p-1 rounded-xl shadow-sm text-body-sm">
+<button class="px-3 py-1.5 rounded-lg text-text-secondary hover:text-on-surface transition-colors font-medium" type="button">Hoje</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-semibold shadow-sm transition-all" type="button">Este Mês</button>
+<button class="px-3 py-1.5 rounded-lg text-text-secondary hover:text-on-surface transition-colors font-medium" type="button">Trimestre</button>
+</div>
+</div>
+</div>
+<!-- 4 MINIMALIST KPI CARDS (KANBAN STYLE: WHITE BG, SOFT BORDER, ROUNDED-2XL) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-base">
+<!-- KPI 1: Leads Ativos -->
+<div class="bg-surface-container-lowest border border-border-subtle hover:border-slate-300 p-space-base rounded-2xl shadow-sm transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-[12px] font-semibold text-text-muted uppercase tracking-wider">Leads Ativos</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary border border-border-subtle">
+<span class="material-symbols-outlined text-[18px]">filter_alt</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-2xs">
+<span class="font-headline-xl text-[32px] text-on-surface font-bold tracking-tight leading-none">48</span>
+<span class="font-body-sm text-text-secondary">oportunidades</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-border-subtle/80 mt-space-xs text-[12px]">
+<span class="inline-flex items-center gap-1 text-olive-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +14% vs anterior
+      </span>
+<span class="text-text-muted">Pipeline ativo</span>
+</div>
+</div>
+<!-- KPI 2: Projetos em Curso -->
+<div class="bg-surface-container-lowest border border-border-subtle hover:border-slate-300 p-space-base rounded-2xl shadow-sm transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-[12px] font-semibold text-text-muted uppercase tracking-wider">Projetos em Curso</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-olive-primary border border-border-subtle">
+<span class="material-symbols-outlined text-[18px]">view_kanban</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-2xs">
+<span class="font-headline-xl text-[32px] text-on-surface font-bold tracking-tight leading-none">14</span>
+<span class="font-body-sm text-text-secondary">sprints ativas</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-border-subtle/80 mt-space-xs text-[12px]">
+<span class="text-text-secondary">
+        Entregas no prazo: <strong class="text-on-surface font-semibold">92%</strong>
+</span>
+<span class="inline-flex items-center gap-1 text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded font-semibold text-[11px]">No ritmo</span>
+</div>
+</div>
+<!-- KPI 3: Faturamento Previsto -->
+<div class="bg-surface-container-lowest border border-border-subtle hover:border-slate-300 p-space-base rounded-2xl shadow-sm transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-[12px] font-semibold text-text-muted uppercase tracking-wider">Faturamento Previsto</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-brass-accent border border-border-subtle">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-2xs">
+<span class="font-headline-xl text-[28px] text-on-surface font-bold tracking-tight leading-none">R$ 348.000</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-border-subtle/80 mt-space-xs text-[12px]">
+<span class="text-text-secondary">Meta: <strong class="text-on-surface font-medium">R$ 380k</strong></span>
+<span class="text-olive-primary font-semibold">91.5% atingido</span>
+</div>
+</div>
+<!-- KPI 4: Reuniões da Semana -->
+<div class="bg-surface-container-lowest border border-border-subtle hover:border-slate-300 p-space-base rounded-2xl shadow-sm transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-[12px] font-semibold text-text-muted uppercase tracking-wider">Reuniões da Semana</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary border border-border-subtle">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-2xs">
+<span class="font-headline-xl text-[32px] text-on-surface font-bold tracking-tight leading-none">6</span>
+<span class="font-body-sm text-text-secondary">agendadas</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-border-subtle/80 mt-space-xs text-[12px]">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-medium truncate">
+<span class="w-2 h-2 rounded-full bg-olive-primary animate-pulse"></span> Em 45m: Solaris Corp
+      </span>
+<span class="text-text-muted">Hoje</span>
+</div>
+</div>
+</div>
+<!-- 2-COLUMN AIRY MAIN LAYOUT (LEFT 60% / RIGHT 40%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-base items-start">
+<!-- LEFT COLUMN (60% - 7 cols of 12): PRÓXIMAS REUNIÕES & DISTRIBUIÇÃO DE LEADS -->
+<div class="lg:col-span-7 flex flex-col gap-space-base">
+<!-- SECTION 1: PRÓXIMAS REUNIÕES DA SEMANA -->
+<div class="bg-surface-container-lowest border border-border-subtle p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-border-subtle/80">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-olive-primary"></span>
+<h2 class="font-headline-sm text-[18px] text-on-surface font-semibold">Próximas Reuniões da Semana</h2>
+</div>
+<a class="text-[13px] text-primary hover:text-olive-primary font-semibold flex items-center gap-1 transition-colors" href="#/agenda">
+          Ver agenda
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- SPACIOUS & WARM MEETING CARDS -->
+<div class="flex flex-col gap-space-sm">
+<!-- Meeting Card 1 (Imminent / Highlighted) -->
+<div class="p-space-md bg-surface-container-low/70 border border-border-subtle hover:border-slate-300 rounded-xl transition-all flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-olive-primary"></div>
+<div class="flex items-center justify-between pl-space-xs">
+<span class="text-[12px] font-semibold text-olive-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">schedule</span> Hoje, 14:30 (em 45min)
+            </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-lime-100 text-lime-900 border border-lime-200 text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">videocam</span> Google Meet
+            </span>
+</div>
+<div class="pl-space-xs flex flex-col mt-0.5">
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface">Grupo Vanguarda / Solaris Corp</h3>
+<p class="font-body-sm text-text-secondary text-[13px]">Alinhamento de escopo técnico e aprovação do novo wireframe de e-commerce.</p>
+</div>
+<div class="pl-space-xs pt-space-xs flex items-center justify-between border-t border-border-subtle/60 text-[12px] text-text-secondary mt-1">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[10px]">LM</div>
+<span>Lucas Martins &amp; Gabriel Santos</span>
+</div>
+<span class="text-text-muted">Duração: 45 min</span>
+</div>
+</div>
+<!-- Meeting Card 2 -->
+<div class="p-space-md bg-surface-container-low/50 border border-border-subtle hover:border-slate-300 rounded-xl transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="text-[12px] font-semibold text-text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">calendar_today</span> Amanhã, 10:00
+            </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-text-secondary border border-border-subtle text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">location_on</span> Sala de Reuniões / Agência
+            </span>
+</div>
+<div class="flex flex-col mt-0.5">
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface">AgroTech Fertilizantes</h3>
+<p class="font-body-sm text-text-secondary text-[13px]">Apresentação de proposta comercial final para reformulação de portal institucional.</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-border-subtle/60 text-[12px] text-text-secondary mt-1">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[10px]">MC</div>
+<span>Mariana Costa</span>
+</div>
+<span class="text-text-muted">Duração: 1h</span>
+</div>
+</div>
+<!-- Meeting Card 3 -->
+<div class="p-space-md bg-surface-container-low/50 border border-border-subtle hover:border-slate-300 rounded-xl transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="text-[12px] font-semibold text-text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">calendar_today</span> Sexta-feira, 16:15
+            </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-text-secondary border border-border-subtle text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">videocam</span> Zoom
+            </span>
+</div>
+<div class="flex flex-col mt-0.5">
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface">Rede Óticas Solaris</h3>
+<p class="font-body-sm text-text-secondary text-[13px]">Kickoff de design sprints e entrega do cronograma detalhado de homologação.</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-border-subtle/60 text-[12px] text-text-secondary mt-1">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-[10px]">FA</div>
+<span>Felipe Alencar &amp; Lucas M.</span>
+</div>
+<span class="text-text-muted">Duração: 30 min</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: GRÁFICO ELEGANTE E SIMPLES DE DISTRIBUIÇÃO DE STATUS DE LEADS -->
+<div class="bg-surface-container-lowest border border-border-subtle p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-xs border-b border-border-subtle/80">
+<div>
+<h2 class="font-headline-sm text-[18px] text-on-surface font-semibold">Distribuição do Funil de Leads</h2>
+<p class="font-body-sm text-text-secondary text-[13px]">Volume atual de negócios por fase de maturação comercial</p>
+</div>
+<span class="bg-surface-container-low border border-border-subtle text-text-secondary px-2.5 py-1 rounded-lg text-[12px] font-semibold self-start sm:self-auto">
+          Total: 48 oportunidades
+        </span>
+</div>
+<!-- Clean Horizontal Stage Progress Bars (Kanban aesthetic) -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Stage 1: Novos Leads -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-olive-primary"></span> Novos Contatos
+            </span>
+<div class="flex items-center gap-2 font-data-tabular">
+<span class="font-bold text-on-surface">19</span>
+<span class="text-text-muted text-[11px]">(39.5%)</span>
+</div>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-olive-primary rounded-full" style="width: 39.5%;"></div>
+</div>
+</div>
+<!-- Stage 2: Em Contato -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Em Qualificação
+            </span>
+<div class="flex items-center gap-2 font-data-tabular">
+<span class="font-bold text-on-surface">14</span>
+<span class="text-text-muted text-[11px]">(29.1%)</span>
+</div>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 29.1%;"></div>
+</div>
+</div>
+<!-- Stage 3: Proposta Enviada -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brass-accent"></span> Proposta Enviada
+            </span>
+<div class="flex items-center gap-2 font-data-tabular">
+<span class="font-bold text-on-surface">9</span>
+<span class="text-text-muted text-[11px]">(18.7%)</span>
+</div>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-brass-accent rounded-full" style="width: 18.7%;"></div>
+</div>
+</div>
+<!-- Stage 4: Em Negociação -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[13px]">
+<span class="font-medium text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Em Negociação
+            </span>
+<div class="flex items-center gap-2 font-data-tabular">
+<span class="font-bold text-on-surface">6</span>
+<span class="text-text-muted text-[11px]">(12.5%)</span>
+</div>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 12.5%;"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-[12px] text-text-secondary border-t border-border-subtle/80">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-olive-primary">check_circle</span> Taxa média de conversão mensal: <strong class="text-on-surface">18.2%</strong></span>
+<a class="font-semibold text-primary hover:underline" href="#/leads">Ver pipeline de leads →</a>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (40% - 5 cols of 12): ATIVIDADES RECENTES & METAS -->
+<div class="lg:col-span-5 flex flex-col gap-space-base">
+<!-- METAS MENSAIS (BARRA DE PROGRESSO VERDE OLIVA IDÊNTICA AO KANBAN) -->
+<div class="bg-surface-container-lowest border border-border-subtle p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-border-subtle/80">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-olive-primary text-[20px]">flag</span>
+<h2 class="font-headline-sm text-[18px] text-on-surface font-semibold">Metas do Mês</h2>
+</div>
+<span class="text-[12px] text-text-muted font-medium">Outubro 2025</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Goal 1: Faturamento -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between text-body-sm text-text-secondary">
+<span class="font-semibold text-on-surface">Novos Contratos Fechados</span>
+<span class="font-bold text-olive-primary">91.5%</span>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-olive-primary rounded-full transition-all duration-500" style="width: 91.5%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-text-muted">
+<span>R$ 348.000 realizados</span>
+<span>Meta: R$ 380.000</span>
+</div>
+</div>
+<!-- Goal 2: Entregas de Sprints -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between text-body-sm text-text-secondary">
+<span class="font-semibold text-on-surface">Entregas de Sprints &amp; LPs</span>
+<span class="font-bold text-olive-primary">77%</span>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-olive-primary rounded-full transition-all duration-500" style="width: 77%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-text-muted">
+<span>11 de 14 concluídas</span>
+<span>3 em andamento</span>
+</div>
+</div>
+<!-- Goal 3: Retenção de Contratos -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between text-body-sm text-text-secondary">
+<span class="font-semibold text-on-surface">Satisfação e Retenção (NPS)</span>
+<span class="font-bold text-emerald-700">96.8%</span>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-600 rounded-full transition-all duration-500" style="width: 96.8%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-text-muted">
+<span>Score 92/100</span>
+<span>Excelente</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ATIVIDADES RECENTES & PULSO DA EQUIPE -->
+<div class="bg-surface-container-lowest border border-border-subtle p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-border-subtle/80">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-olive-primary text-[20px]">notifications_active</span>
+<h2 class="font-headline-sm text-[18px] text-on-surface font-semibold">Atividades Recentes</h2>
+</div>
+<span class="text-[11px] font-semibold text-text-muted uppercase">Hoje</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="flex items-start gap-space-sm pb-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">
+            MC
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-baseline justify-between gap-1">
+<span class="font-body-sm text-[13px] font-semibold text-on-surface truncate">Mariana Costa</span>
+<span class="text-[11px] text-text-muted shrink-0">Há 18 min</span>
+</div>
+<p class="text-[12px] text-text-secondary mt-0.5">Concluiu os wireframes de alta fidelidade para <strong class="text-on-surface">Solaris Tech Corp</strong>.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-space-sm pb-space-xs pt-space-2xs border-t border-border-subtle/60">
+<div class="w-8 h-8 rounded-full bg-brass-accent text-on-secondary flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">
+            BP
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-baseline justify-between gap-1">
+<span class="font-body-sm text-[13px] font-semibold text-on-surface truncate">Beatriz Prado</span>
+<span class="text-[11px] text-text-muted shrink-0">Há 1h</span>
+</div>
+<p class="text-[12px] text-text-secondary mt-0.5">Enviou proposta orçamentária atualizada para <strong class="text-on-surface">FinLogistics Tech</strong>.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-space-sm pt-space-2xs border-t border-border-subtle/60">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">
+            FA
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-baseline justify-between gap-1">
+<span class="font-body-sm text-[13px] font-semibold text-on-surface truncate">Felipe Alencar</span>
+<span class="text-[11px] text-text-muted shrink-0">Há 2h</span>
+</div>
+<p class="text-[12px] text-text-secondary mt-0.5">Finalizou a integração do Gateway Pix no checkout de <strong class="text-on-surface">Nexa Cosméticos</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ATALHOS RÁPIDOS & AÇÕES DIRETAS -->
+<div class="bg-surface-container-low/70 border border-border-subtle p-space-md rounded-2xl flex flex-col gap-space-sm">
+<span class="text-[11px] font-semibold text-text-muted uppercase tracking-wider">Ações Rápidas da Agência</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<a class="flex items-center gap-2 p-2.5 bg-surface-container-lowest border border-border-subtle hover:border-slate-300 rounded-xl transition-all text-[12px] font-semibold text-on-surface shadow-xs" href="#/leads">
+<span class="material-symbols-outlined text-[18px] text-primary">person_add</span>
+<span>Cadastrar Lead</span>
+</a>
+<a class="flex items-center gap-2 p-2.5 bg-surface-container-lowest border border-border-subtle hover:border-slate-300 rounded-xl transition-all text-[12px] font-semibold text-on-surface shadow-xs" href="#/orcamentos">
+<span class="material-symbols-outlined text-[18px] text-brass-accent">request_quote</span>
+<span>Criar Proposta</span>
+</a>
+<a class="flex items-center gap-2 p-2.5 bg-surface-container-lowest border border-border-subtle hover:border-slate-300 rounded-xl transition-all text-[12px] font-semibold text-on-surface shadow-xs" href="#/projetos">
+<span class="material-symbols-outlined text-[18px] text-olive-primary">view_kanban</span>
+<span>Quadro Kanban</span>
+</a>
+<a class="flex items-center gap-2 p-2.5 bg-surface-container-lowest border border-border-subtle hover:border-slate-300 rounded-xl transition-all text-[12px] font-semibold text-on-surface shadow-xs" href="#/agenda">
+<span class="material-symbols-outlined text-[18px] text-tertiary">add_alarm</span>
+<span>Nova Reunião</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+</body></html>
