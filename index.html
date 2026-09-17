@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRSys M3000 - CRM para Agências Web</title>
+
+  <!-- Fonts Google Stitch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Phosphor Icons fallback/complementary -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Tailwind CSS via CDN com plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#768c1a",
+            "primary-container": "#5b6d13",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#fcffe2",
+            "secondary": "#8c7304",
+            "secondary-container": "#fef9c3",
+            "on-secondary-container": "#78350f",
+            "brass-accent": "#8c7304",
+            "olive-primary": "#768c1a",
+            "background": "#f8fafc",
+            "surface": "#f8fafc",
+            "surface-container-low": "#f8fafc",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#f1f5f9",
+            "surface-container-high": "#e2e8f0",
+            "border-subtle": "#e2e8f0",
+            "border-strong": "#cbd5e1",
+            "text-primary": "#0f172a",
+            "text-secondary": "#475569",
+            "text-muted": "#94a3b8",
+            "on-surface": "#0f172a",
+            "on-surface-variant": "#64748b",
+            "tertiary": "#059669",
+            "error": "#dc2626",
+            "error-container": "#fee2e2"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.375rem",
+            "xl": "0.5rem",
+            "2xl": "1rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "layout-sidebar": "16rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-md": "0.75rem",
+            "space-2xs": "0.125rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-base": "1rem"
+          },
+          fontFamily: {
+            "headline-lg": ["Outfit", "sans-serif"],
+            "headline-md": ["Outfit", "sans-serif"],
+            "headline-sm": ["Outfit", "sans-serif"],
+            "headline-xl": ["Outfit", "sans-serif"],
+            "body-lg": ["Open Sans", "sans-serif"],
+            "body-md": ["Open Sans", "sans-serif"],
+            "body-sm": ["Open Sans", "sans-serif"],
+            "label-xs": ["Open Sans", "sans-serif"],
+            "label-md": ["Open Sans", "sans-serif"],
+            "data-tabular": ["Open Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen">
+  <!-- Shell App Container -->
+  <div id="app" class="min-h-screen"></div>
+
+  <!-- Entrypoint JS -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
